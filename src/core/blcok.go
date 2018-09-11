@@ -6,7 +6,9 @@ import (
 	"time"
 )
 
-//区块结构体
+/**
+ *区块结构体
+ */
 type Block struct {
 	Index int64   		//区块号
 	Timestamp int64			//当前时间戳
@@ -15,7 +17,9 @@ type Block struct {
 	data string				//区块携带的数据
 }
 
-//计算区块hash值的函数
+/**
+ *计算区块hash值的函数
+ */
 func CalculateHash (b Block) string {
 	//拼装加密前的字符串，由区块号，区块创建时间，前一个区块的hash值组成
 	blockdata := string(b.Index) + string(b.Timestamp) + b.PreBlockHash;
@@ -25,7 +29,9 @@ func CalculateHash (b Block) string {
 	return hex.EncodeToString(calculateBlock[:])
 }
 
-//创建一个新区块
+/**
+ *创建一个新区块
+ */
 func CreateNewBlock(preBlock Block, data string) Block {
 	//初始化一个区块结构体
 	newBlock := Block{}
@@ -38,7 +44,9 @@ func CreateNewBlock(preBlock Block, data string) Block {
 	return newBlock
 }
 
-//创建创世区块
+/**
+ *创建创世区块
+ */
 func CreateGenesisBlock() Block {
 	//初始化区块
 	newBlock := Block{}
@@ -46,7 +54,7 @@ func CreateGenesisBlock() Block {
 	newBlock.Index = -1
 	//创世区块为第一个区块，没有前一个区块，所以前一个区块的hash值为空
 	newBlock.PreBlockHash = ""
-	return CreateNewBlock(newBlock, "这是创世区块")
+	return CreateNewBlock(newBlock, "This is the GenesisBlock!")
 }
 
 
