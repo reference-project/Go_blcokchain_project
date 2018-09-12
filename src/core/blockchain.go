@@ -75,6 +75,8 @@ func (currentkchain *Blockchain)SendData(data string){
  		fmt.Println("CreateTime:", v.Timestamp)
  		fmt.Println("PreBlockHash:", v.PreBlockHash)
  		fmt.Println("CurrentBlockHash:", v.BlockHash)
+ 		fmt.Println("Nonce:",v.Nonce)
+ 		NewProofOfWork(v)
  		fmt.Println("Data:", v.data)
 	}
  }

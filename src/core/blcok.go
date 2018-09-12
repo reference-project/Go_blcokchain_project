@@ -15,6 +15,7 @@ type Block struct {
 	PreBlockHash string		//前一个区块的hash值
 	BlockHash string		//当前区块的hash值
 	data string				//区块携带的数据
+	Nonce int   			//工作量证明
 }
 
 /**
@@ -39,8 +40,12 @@ func CreateNewBlock(preBlock Block, data string) Block {
 	newBlock.Timestamp = time.Now().Unix()
 	newBlock.Index = preBlock.Index + 1
 	newBlock.PreBlockHash = preBlock.BlockHash
-	newBlock.BlockHash = CalculateHash(newBlock)
+	//newBlock.BlockHash = CalculateHash(newBlock)
 	newBlock.data = data
+	pow := NewProofOfWork(&newBlock)
+	nonce,hash := pow.Run()
+	newBlock.BlockHash = hash
+	newBlock.Nonce = nonce
 	return newBlock
 }
 
