@@ -1,9 +1,6 @@
 package core
 
 import (
-	"bytes"
-	"crypto/sha256"
-	"strconv"
 	"time"
 )
 
@@ -15,26 +12,25 @@ type Block struct {
 	PreBlockHash []byte
 	Hash []byte
 	Data []byte
+	Nonce int
 }
+
 /**
  * 创建区块函数
  */
 func CreateNewBlock(preBlockHash []byte, data string) *Block{
 	//初始化数组并赋值
-	newBlock := &Block{time.Now().Unix(),preBlockHash,[]byte{},[]byte(data)}
-	//调用hash加密函数为新区快的hash赋值
-	newBlock.setHash()
+	newBlock := &Block{time.Now().Unix(),preBlockHash,[]byte{},[]byte(data),0}
+	//创建工作量证明
+	pow := NewProofOfWork(newBlock)
+	//运行工作量证明
+	nonce, hash := pow.Run()
+	newBlock.Hash = hash[:]
+	newBlock.Nonce = nonce
+	//newBlock.setHash()
 	return newBlock
 }
-/**
- * hash加密函数用于加密
- */
-func (b *Block)setHash(){
-	timestamp := []byte(strconv.FormatInt(b.Timestamp,10))
-	headers := bytes.Join([][]byte{b.PreBlockHash, b.Data, timestamp}, []byte{})
-	hash := sha256.Sum256(headers)
-	b.Hash = hash[:]
-}
+
 /**
  *构建创世区块函数，由于创世区块没有前驱，所以preblockhash传空
  */
