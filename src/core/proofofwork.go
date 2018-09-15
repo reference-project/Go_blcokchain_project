@@ -3,9 +3,7 @@ package core
 import (
 	"bytes"
 	"crypto/sha256"
-	"encoding/binary"
 	"fmt"
-	"log"
 	"math"
 	"math/big"
 )
@@ -78,17 +76,6 @@ func (pow *ProofOfWork)prepareData(nonce int) []byte{
 		[]byte{},
 		)
 	return data
-}
-
-// 将一个 int64 转化为一个字节数组(byte array)
-func IntToHex(num int64) []byte {
-	buff := new(bytes.Buffer)
-	err := binary.Write(buff, binary.BigEndian, num)
-	if err != nil {
-		log.Panic(err)
-	}
-
-	return buff.Bytes()
 }
 
 func (pow *ProofOfWork)Validate() bool{
