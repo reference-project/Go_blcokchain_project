@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6810c8d9-cbfa-47f7-b1f2-4f15cd6da3dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/cli.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/utils.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../goText/.idea/goText.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../goText/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../goText/.idea/modules.xml" afterDir="false" />
@@ -14,13 +12,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/windows_amd64/core.a" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/windows_amd64/core.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coin/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/coin/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/block.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/block.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/blockchain.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/blockchain.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/proofofwork.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/proofofwork.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../helloWord.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/Test1.a" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pkg/windows_amd64/Test2.a" beforeDir="false" />
@@ -93,7 +84,7 @@
     <session id="926887406">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -149,7 +140,7 @@
         <entry file="file://$PROJECT_DIR$/src/core/blockchain.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#14#58#0" expanded="true" />
               </folding>
@@ -442,7 +433,7 @@
     <entry file="file://$PROJECT_DIR$/src/core/blockchain.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#14#58#0" expanded="true" />
           </folding>
